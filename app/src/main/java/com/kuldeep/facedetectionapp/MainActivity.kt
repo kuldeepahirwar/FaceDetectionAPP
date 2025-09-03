@@ -2,6 +2,7 @@ package com.kuldeep.facedetectionapp
 
 import android.Manifest
 import android.content.Context
+import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.net.Uri
@@ -89,6 +90,12 @@ fun AppContent() {
             }) {
                 Text(text = "Face Detection")
             }
+        Button(onClick = {
+            val intent = Intent(context, TextRecognitionActivity::class.java)
+            context.startActivity(intent)
+        }) {
+            Text(text = "Text Recognition")
+        }
     }
     if (capturedImageUri.toString().isNotEmpty()) {
        /* Image(
@@ -161,6 +168,11 @@ fun Context.createImageFile(): File {
         externalCacheDir      /* directory */
     )
     return image
+}
+
+@Composable
+fun NavigateToTextRecognition() {
+
 }
 @Preview(showSystemUi = true)
 @Composable

@@ -49,6 +49,11 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+    implementation(libs.androidx.appcompat)
+    implementation(libs.material)
+    implementation(libs.androidx.activity)
+    implementation(libs.androidx.constraintlayout)
+    implementation(libs.play.services.vision.common)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -56,10 +61,13 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
-
+    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     // ML Kit Face Detection
     implementation("com.google.mlkit:face-detection:16.1.7")
     // Coil for image loading
     implementation("io.coil-kt:coil-compose:2.4.0")
-
+    // ML Kit Text Recognition
+    //implementation("com.google.mlkit:text-recognition:16.0.0")
+    //Google Vision
+    implementation("com.google.android.gms:play-services-vision:20.1.3")
 }
